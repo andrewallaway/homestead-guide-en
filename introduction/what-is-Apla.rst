@@ -115,7 +115,7 @@ Applications on Genesis
 ==========================
 An application on the Genesis platform is a system of tables, contracts and interfaces with configured access rights. Such applications perform useful functions or implement various services. 
 
-Each ecosystems creates its own set of tables for development of applications. This, however, does not exclude the possibility of accessing tables from other ecosystems by specifying those ecosystems' prefixes in table names. Tables are not in any way bound (nor belong) to specific contracts, and can be used by all applications. The permissions for entering data into tables are set by way of configuring the access rights. Specialized contracts – smart laws – can be used for rights management. 
+Each ecosystem creates its own set of tables for the development of applications. This, however, does not exclude the possibility of accessing tables from other ecosystems by specifying those ecosystems' prefixes in table names. Tables are not in any way bound (nor belong) to specific contracts, and can be used by all applications. The permissions for entering data into tables are set by way of configuring the access rights. Specialized contracts – smart laws – can be used for rights management. 
 
 It should be noted, that the design and creation of applications on Genesis does not require the software developers to know the structure of the network and its protocols, nor to understand the algorithm of blockchain formation and synchronization of databases on full nodes. Work in the Molis software client, including the creation of application elements, reading data from tables, execution of contracts and displaying results on the screen, looks and feels like operations with modules of a software environment on a local computer.
 
@@ -143,9 +143,9 @@ Ecosystem Parameters
 The ecosystem parameters are available for viewing and editing from the Ecosystem parameters section in the administrative tools of the Molis software client. Ecosystem parameters can be divided into the following groups:
 
 •	General parameters: name of the ecosystem (ecosystem_name), its description (ecosystem_description), account of its founder (founder_account), and other information,
-•	Access parameters, which define exclusive rights to access application elements (changing_tables, changing_contracts, changing_page, changing_menu, changing_signature, changing_language)
+•	Access parameters: which define exclusive rights to access application elements (changing_tables, changing_contracts, changing_page, changing_menu, changing_signature, changing_language)
 •	Technical parameters: for example, user stylesheets (stylesheet),
-•	User parameters of the ecosystem, where constants or lists (separated by commas), required for the work of applications are stored.
+•	User parameters of the ecosystem: where constants or lists (separated by commas), required for the work of applications are stored.
 
 Rights to edit can be specified for every ecosystem's parameter.
 
@@ -153,7 +153,7 @@ In order to retrieve values of certain ecosystem parameters, both the contracts 
 
 Parameters of the Platform Ecosystem
 --------------------------
-All parameters of the Genesis blockchain platform are stored in the parameters table of the platform configuration ecosystem. These are the following parameters:
+All parameters of the Genesis blockchain platform are stored in the parameters table of the platform configuration ecosystem:
 
 -	Time period for creation of a block by a Validating Node,
 -	Source codes of pages, contracts, tables, and menus of new ecosystems,
@@ -161,7 +161,7 @@ All parameters of the Genesis blockchain platform are stored in the parameters t
 -	Maximum transaction and block sizes, and the maximum number of transactions in one block,
 -	Maximum number of transactions sent by the same account in one block,
 -	Maximum amount of Fuel spent on one transaction and one block,
--Fuel to APL exchange rate, and other parameters.
+- Fuel to APL exchange rate, and other parameters.
 
 Managing the parameters of the platform configuration ecosystem on the program level is the same as managing the parameters of any other ecosystem. Unlike in other ecosystems, where all rights to manage ecosystem parameters belong to the ecosystem founder, changing the parameters of the platform configuration ecosystem can only be performed using the UpdSysContract contract, the management of which is defined in the platform's Legal System. Contracts (smart laws) of the Legal System are created before the network is launched and implement the rights and standards, stipulated in the “Platform's Legal System” section of the White Paper.  
 
@@ -170,7 +170,7 @@ Access Rights Control Mechanism
 ********************************************************************************
 Genesis has a multi-level access rights management system. Access rights can be configured to create and change any element of an application: contracts, database tables, interface pages, and ecosystem parameters. Permissions to change access rights can be configured as well.
 
-By default, all rights in an Genesis ecosystem are managed by its founder (this is defined in the MainCondition contract, which every ecosystem has by default). However, after specialized smart laws are created, access rights control can be transferred to all ecosystem members or a group of such members.
+By default, all rights in a Genesis ecosystem are managed by its founder (this is defined in the MainCondition contract, which every ecosystem has by default). However, after specialized smart laws are created, access rights control can be transferred to all ecosystem members or a group of such members.
 
 Controlled Operations
 ==========================
